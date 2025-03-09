@@ -11,11 +11,8 @@ app.use(cors());
 const SECRET_KEY = 'my_super_secret_123!';
 
 // Connect to MongoDB with error handling
-mongoose.connect('mongodb://localhost:27017/crud', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log("MongoDB Connected"))
-  .catch(err => console.error("MongoDB Connection Error:", err));
+mongoose.connect('mongodb://localhost:27017/aniketdb')
+
 
 // User Schema
 const userSchema = new mongoose.Schema({
